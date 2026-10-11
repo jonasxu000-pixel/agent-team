@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "test_commands": [["python", "test_greeting.py"]],
+  "claude_budget": 1.0
+}

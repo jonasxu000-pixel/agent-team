@@ -1,0 +1,6 @@
+interface:
+  display_name: "Agent Team"
+  short_description: "GPT主导，Claude按需承担设计、架构、实现与审查，支持有界无人值守与费用对账"
+  default_prompt: "使用 $agent-team 处理当前 Git 项目的需求，GPT 主导，Claude 按需参与，遵守本任务预算授权。"
+policy:
+  allow_implicit_invocation: true

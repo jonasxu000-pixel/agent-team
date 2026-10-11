@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-agent-team"
+version = "0.3.2"
+description = "ChatGPT Codex-led local Git workflow with budgeted Claude escalation"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "Agent Team contributors"}]
+keywords = ["agents", "codex", "claude", "orchestrator", "git-worktree"]
+classifiers = ["Development Status :: 3 - Alpha", "Operating System :: Microsoft :: Windows",
+               "Programming Language :: Python :: 3", "Programming Language :: Python :: 3.12"]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+agent-team = "agent_team.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["agent_team*"]

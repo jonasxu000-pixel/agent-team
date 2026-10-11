@@ -1,0 +1,23 @@
+name: Local regression
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate source and synthetic tests
+        run: python -m unittest discover -s tests -v
+      - name: Check publishable files
+        run: python scripts/check-publication.py

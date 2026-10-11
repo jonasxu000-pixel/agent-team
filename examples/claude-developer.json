@@ -1,0 +1,5 @@
+{
+  "request": "按本次需求实现一个独立算法模块；使用前请替换此示例需求和精确文件名。",
+  "files": ["utils/exampleAlgorithm.js"],
+  "acceptance": "必须说明边界条件，并由 Codex 集成用户指定的自动测试。"
+}
