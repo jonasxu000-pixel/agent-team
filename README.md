@@ -51,10 +51,10 @@ Claude Native Developer 使用受控 Windows sandbox、短临时运行区和内�
 | Claude Code CLI + 已有 CaMeL 配置 | 仅在明确授权付费参与时需要 |
 | 已配置的 OpenCLI / Chrome 登录会话 | 当前 CaMeL 钱包、套餐及账户匹配读取；不会自动安装或登录 |
 
-克隆后从源码安装（将占位符替换为实际 GitHub 账号）：
+克隆后从源码安装：
 
 ```powershell
-git clone https://github.com/YOUR_GITHUB_ACCOUNT/agent-team.git
+git clone https://github.com/jonasxu000-pixel/agent-team.git
 cd agent-team
 py -3.12 -m pip install --user -e .
 python -m agent_team --version
