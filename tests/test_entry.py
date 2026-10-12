@@ -17,7 +17,8 @@ from agent_team.adapters import CodexAdapter, Answer
 class EntryTests(Fixture):
     def setUp(self):
         super().setUp()
-        self.repo_path = self.repo()
+        # Windows temp directories can use an 8.3 alias; match the entry's canonical path.
+        self.repo_path = self.repo().resolve()
         self.profiles = self.root / "profiles"
 
     def configure(self):

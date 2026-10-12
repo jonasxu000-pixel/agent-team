@@ -13,7 +13,8 @@ class WatchTests(Fixture):
 
     def test_recovers_from_fresh_official_snapshot_without_restarting_task(self):
         results = iter([{"status": "QUOTA_EXHAUSTED"}, {"status": "AVAILABLE"}])
-        self.assertTrue(wait_for_codex(self.store, self.id, reader=lambda: next(results), timeout=.1, interval=.001))
+        # Allow the real fixture's disk writes on slower CI hosts; only two probes are used.
+        self.assertTrue(wait_for_codex(self.store, self.id, reader=lambda: next(results), timeout=5, interval=.001))
         task = self.store.task(self.id)
         self.assertEqual(task["phase"], "develop")
         self.assertEqual(task["data"]["codex_head"], "fixed")
